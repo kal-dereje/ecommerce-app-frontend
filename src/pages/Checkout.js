@@ -5,8 +5,8 @@ import { CognitoUserPool } from "amazon-cognito-identity-js";
 
 // Replace with your actual Cognito values
 const poolData = {
-  UserPoolId: "us-east-1_HhhUqRFK4", // ← Replace this
-  ClientId: "4cslra82t15ci6ue61gsiju33p", // ← Replace this
+  UserPoolId: "us-east-1_cnCPBrOWT", // ← Replace this
+  ClientId: "6r1uvr0t7urjn0a0rpso0d6ja2", // ← Replace this
 };
 
 const userPool = new CognitoUserPool(poolData);
@@ -33,7 +33,7 @@ const Checkout = () => {
       const idToken = session.getIdToken().getJwtToken();
 
       const res = await fetch(
-        "https://ko19zy4goa.execute-api.us-east-1.amazonaws.com/prod/order",
+        "https://zcmbj7jbd9.execute-api.us-east-1.amazonaws.com/prod/order",
         {
           method: "POST",
           headers: {
