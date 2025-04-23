@@ -44,23 +44,51 @@ const Cart = () => {
 
 export default Cart;
 
-const Container = styled.div`
-  padding: 2rem;
+
+
+export const Container = styled.div`
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 -4px 16px rgba(0, 0, 0, 0.05);
+  z-index: 999;
 `;
 
-const Summary = styled.div`
-  margin-top: 1rem;
+export const Summary = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #2d3436;
+
+  span {
+    font-weight: 600;
+    color: #00b894;
+  }
 `;
 
-const Button = styled.button`
-  background: ${({ secondary }) => (secondary ? "#aaa" : "#007bff")};
-  color: white;
+export const Button = styled.button`
+  background: ${({ secondary }) => (secondary ? "#dfe6e9" : "#0984e3")};
+  color: ${({ secondary }) => (secondary ? "#2d3436" : "#ffffff")};
   border: none;
-  padding: 0.6rem 1.2rem;
-  margin-right: 0.5rem;
-  border-radius: 6px;
+  padding: 0.7rem 1.4rem;
+  margin-left: 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
 
   &:hover {
-    background: ${({ secondary }) => (secondary ? "#888" : "#0056b3")};
+    background: ${({ secondary }) => (secondary ? "#b2bec3" : "#0652dd")};
+    color: white;
   }
 `;

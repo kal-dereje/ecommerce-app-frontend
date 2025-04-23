@@ -74,28 +74,68 @@ const Checkout = () => {
 
 export default Checkout;
 
-const Container = styled.div`
-  padding: 2rem;
+export const Container = styled.div`
+  max-width: 600px;
+  margin: 3rem auto;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+  color: #2d3436;
+  font-family: 'Inter', sans-serif;
 `;
 
-const Item = styled.p`
-  margin-bottom: 0.5rem;
-`;
-
-const Total = styled.h3`
-  margin-top: 1rem;
-`;
-
-const Button = styled.button`
-  margin-top: 1.5rem;
-  background: #28a745;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 6px;
+export const Item = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.2rem;
   font-size: 1rem;
+  padding-bottom: 0.4rem;
+  border-bottom: 1px dashed #ccc;
+
+  &:last-of-type {
+    border-bottom: none;
+  }
+`;
+
+export const Label = styled.span`
+  font-weight: 500;
+  color: #636e72;
+`;
+
+export const Value = styled.span`
+  font-weight: 600;
+  color: #2f3542;
+`;
+
+export const Total = styled.h2`
+  margin-top: 2rem;
+  text-align: right;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #00b894;
+`;
+
+export const Button = styled.button`
+  margin-top: 2rem;
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(to right, #00b894, #00cec9);
+  border: none;
+  border-radius: 50px;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 0.5px;
+  box-shadow: 0 6px 20px rgba(0, 206, 201, 0.3);
+  transition: all 0.3s ease;
 
   &:hover {
-    background: #218838;
+    background: linear-gradient(to right, #00a87c, #00b9c5);
+    box-shadow: 0 8px 30px rgba(0, 206, 201, 0.5);
+    transform: translateY(-2px);
+    cursor: pointer;
   }
 `;

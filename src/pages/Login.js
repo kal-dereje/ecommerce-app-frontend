@@ -40,39 +40,53 @@ const Login = () => {
 export default Login;
 
 const Container = styled.div`
+  min-height: 100vh;
   display: flex;
   justify-content: center;
-  padding: 3rem;
+  align-items: center;
+  background: linear-gradient(135deg, #f6f9fc, #e9eff5);
+  padding: 2rem;
 `;
 
 const Form = styled.form`
-  background: white;
-  padding: 2rem;
-  border: 1px solid #ddd;
-  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.2);
+  border-radius: 16px;
+  padding: 2.5rem;
   width: 100%;
-  max-width: 400px;
+  max-width: 420px;
 `;
 
 const Input = styled.input`
-  display: block;
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 10px;
+  padding: 0.9rem 1rem;
+  margin-bottom: 1.2rem;
   width: 100%;
-  padding: 0.75rem;
-  margin: 1rem 0;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+  font-size: 1rem;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.05);
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px #a0c4ff;
+  }
 `;
 
 const Button = styled.button`
-  background: #007bff;
-  color: white;
+  background: linear-gradient(135deg, #6c63ff, #8364e8);
+  color: #fff;
   border: none;
-  padding: 0.75rem;
+  padding: 0.85rem;
   width: 100%;
-  border-radius: 6px;
+  border-radius: 10px;
   font-size: 1rem;
+  font-weight: 600;
+  transition: background 0.3s ease;
 
   &:hover {
-    background: #0056b3;
+    background: linear-gradient(135deg, #554dff, #7153e8);
   }
 `;
