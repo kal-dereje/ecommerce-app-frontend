@@ -7,7 +7,7 @@ const SearchBar = ({ searchTerm, setSearchTerm }) => {
     <SearchContainer>
       <Input
         type="text"
-        placeholder="Search products..."
+        placeholder="Search products 123..."
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
